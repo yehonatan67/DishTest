@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yair.dishtest.MainActivity">
+
+    <CheckBox
+        android:id="@+id/egg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="32dp"
+        android:text="egg" />
+
+    <CheckBox
+        android:id="@+id/tahini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tahini"
+        android:layout_alignBaseline="@+id/egg"
+        android:layout_alignBottom="@+id/egg"
+        android:layout_toStartOf="@+id/hummusBeans"
+        android:layout_marginEnd="40dp" />
+
+    <CheckBox
+        android:id="@+id/hummusBeans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tahini"
+        android:layout_marginEnd="20dp"
+        android:text="hummusBeans" />
+
+    <CheckBox
+        android:id="@+id/masabaha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/egg"
+        android:layout_below="@+id/egg"
+        android:layout_marginTop="48dp"
+        android:text="masabaha" />
+
+    <CheckBox
+        android:id="@+id/complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tahini"
+        android:layout_alignTop="@+id/masabaha"
+        android:text="complete" />
+
+    <CheckBox
+        android:id="@+id/horseBeans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hummusBeans"
+        android:layout_alignTop="@+id/complete"
+        android:text="horseBeans" />
+
+    <CheckBox
+        android:id="@+id/meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/masabaha"
+        android:layout_below="@+id/masabaha"
+        android:layout_marginTop="53dp"
+        android:text="meat" />
+
+    <CheckBox
+        android:id="@+id/mushrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/complete"
+        android:layout_alignTop="@+id/meat"
+        android:text="mushrooms" />
+
+    <CheckBox
+        android:id="@+id/shakshuka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/horseBeans"
+        android:layout_alignTop="@+id/mushrooms"
+        android:text="shakshuka" />
+
+    <Button
+        android:id="@+id/createHummusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="createHummus"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignStart="@+id/meat" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="arrayTest"
+        android:onClick="arrayTestFun"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignStart="@+id/shakshuka"
+        android:layout_marginBottom="14dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:id="@+id/DishImage"
+         android:src="@drawable/plain"
+            android:scaleType="centerCrop"
+
+            />
+        <TextView
+            android:id="@+id/dishName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/DishImage"
+            android:text="Plain Hummus"
+            android:textAlignment="center"
+            android:background="#AA555555" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
